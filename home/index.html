@@ -7,11 +7,43 @@
 <link rel="stylesheet" href="../css/normaliz.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Marhey:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- jQuery  -->
-<script src="jquery-3.7.1.min.js"></script> 
-<!-- bootstarp -->
+
+<link href=
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' 
+         rel='stylesheet'>
+
+
+
+
+<!-- bootstarp 5-->
+
+
+<!-- AOS Scrolling Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+ <!-- slick slider CDN -->
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+ <!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+<!-- owl carousel libary -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+ 
+
+
+ <!-- js slick slider -->
+
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
@@ -20,7 +52,7 @@
 <body>
 
 <!-- Start Nav-->
-<nav class="navbar navbar-expand-lg navbar-light navsetion nav-section ">
+<!-- <nav class="navbar navbar-expand-lg navbar-light navsetion nav-section ">
 <div class="container-fluid">
 <a class="navbar-brand fs-10 fw-bold text-dark" href="/home">Hotel</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +85,37 @@
 
 </div>
 </div>
-</nav>
+</nav> -->
 <!-- Start Nav -->
-
-
+ 
+<nav class="navbar navbar-expand-lg    fixed-top  nav-Bar   navsetion nav-section ">
+    <div class="container-fluid">
+      <a    class="navbar-brand fs-10 fw-bold text-white" href="#">F <span style="color: yellow;">oo</span>d</a>
+      <img src="../images/food/menuIcon.png"  style="height: 50px;"  class="navbar-toggler  "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </img>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto text-center   me-auto  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">OUR MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#chefs">CHEFS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT</a>
+          </li>
+        
+        
+         
+        </ul>
+ 
+        
+      </div>
+    </div>
+  </nav>
 <!-- start Landing -->
 <div class="landing">
 
@@ -65,10 +124,9 @@
 <p>make your self at home </p>
 </div>
 <form class="bookingForm" action="www.google.com">
-
 <div class="type">
 <h5 id="mydata">room</h5>
-<div class="roomcard">
+<div class="room_card">
 <select name="Guest Type" id="guestNumber"> 
 <option value="1"  >1</option>
 <option value="2"   >2</option>
@@ -81,10 +139,11 @@
 </div>
 
 
+
 <div class="type">
 <h5>checkin</h5>
 <div class="check-in">
-<input type="text" id="check-In" placeholder="check in">
+<input type="text" id="my_date_picker" placeholder="check in">
 <img src="../images/icons/calendar.png" alt="">
 
 </div>
@@ -93,7 +152,7 @@
 <div class="type">
 <h5>checkout</h5>
 <div class="checkout">
-<input type="text" name="checkout" id="check-out" placeholder="check-out" >
+<input type="text" name="checkout" id="date_picker_chekOut" placeholder="check-out" >
 <img src="../images/icons/calendar.png" alt="">
 
 </div>
@@ -102,11 +161,10 @@
 <div class="type">
 <h5>Guests</h5>
 <div class="roomcard">
-<select name="Guest Typ" id="guest">
+<select class="numofrooms" name="Guest Typ" id="guest">
 <option value="1" selected="selected" class="guestnum">1</option>
 <option value="1" selected="selected" class="guestnum">2</option>
 <option value="1" selected="selected" class="guestnum">3</option>
-
 </select>
 <img src="../images/icons/user (1).png" alt="">
 
@@ -114,17 +172,15 @@
 
 </div>
 <div class="bookBtn">
-<a id="BookBtn">Book know</a> 
-<!-- <input type="text" name="checkin" id="check-in" placeholder="checkin"> -->
-
-
+<a id="BookBtn" href="www.google.com" class="btn">Book know</a> 
 </div>
-
 </form>
 </div>
 <!-- End Landing -->
 
 <!-- Start whyUs  Section -->
+
+
 
 <section id="whyUs">
 <div class="whyUs container d-flex align-items mb-5  ">
@@ -158,13 +214,14 @@
 <!-- Start hotelRooms Section -->
 
 <section id="hotelRooms">
-<div class="hotelRooms">
+
+<div class="hotelRooms" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
 <div class="headingTitle">
 <h3>Checkout Our best Hotel Rooms</h3>
 
 </div>
-<div class="hotelContainer" >
-<div id="firstbox" class="box" data-inedx="done" >
+<div class="hotelContainer slider" >
+<div id="box" class="box" data-inedx="done" >
 <img src="../images/rooms/room1.jpg" alt="">
 <h3>Single Constrast Room</h3>
 <div class="features">
@@ -176,14 +233,10 @@
 
 
 </div>
-<div class="icons">
-<i id="hart" class="fa-solid fa-heart"  style="color: #ff0505; font-size: 25px;"></i>
 
-
-</div>
 <div class="info">
 <h5>100$<span>/perday</span>s</h5>
-<a  class="#landing">Book Now</a>
+<a  class="addBnt">Book Now</a>
 
 </div>
 
@@ -203,13 +256,226 @@
 
 
 </div>
-<div class="icons">
-<i id="hart" class="fa-solid fa-heart"  style="color: #ff0505; font-size: 25px;"></i>
+
+<div class="info">
+<h5>160$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/coffee/smallroom (4).jpg" alt="">
+
+<h3>Stidow Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+</div>
+
+<div class="info">
+<h5>240$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/coffee/smallroom (3).jpg" alt="">
+
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
 
 </div>
 <div class="info">
+<h5>410$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+<div class="box"  data-inedx="done">
+    <img src="../images/coffee/smallroom (1).jpg" alt="">
+    
+    <h3>Single Constrast Room</h3>
+    <div class="features">
+    <img src="../images/icons/clock (3).png" alt="">
+    <img src="../images/icons/fork.png" alt="">
+    <img src="../images/icons/wifi-signal.png" alt="">
+    <img src="../images/icons/cloth.png" alt="">
+    
+    
+    
+    </div>
+    <div class="info">
+    <h5>410$<span>/perday</span></h5>
+    <a  class="addBnt">Book Now</a>
+    
+    </div>
+    
+    </div>
+    <div class="box"  data-inedx="done">
+        <img src="../images/coffee/smallroom (2).jpg" alt="">
+        
+        <h3>Single Constrast Room</h3>
+        <div class="features">
+        <img src="../images/icons/clock (3).png" alt="">
+        <img src="../images/icons/fork.png" alt="">
+        <img src="../images/icons/wifi-signal.png" alt="">
+        <img src="../images/icons/cloth.png" alt="">
+        
+        
+        
+        </div>
+        <div class="info">
+        <h5>410$<span>/perday</span></h5>
+        <a  class="addBnt">Book Now</a>
+        
+        </div>
+        
+        </div>
+        <div class="box"  data-inedx="done">
+            <img src="../images/coffee/smallroom (5).jpg" alt="">
+            
+            <h3>Single Constrast Room</h3>
+            <div class="features">
+            <img src="../images/icons/clock (3).png" alt="">
+            <img src="../images/icons/fork.png" alt="">
+            <img src="../images/icons/wifi-signal.png" alt="">
+            <img src="../images/icons/cloth.png" alt="">
+            
+            
+            
+            </div>
+            <div class="info">
+            <h5>410$<span>/perday</span></h5>
+            <a  class="addBnt">Book Now</a>
+            
+            </div>
+            
+            </div>
+    
+            <div class="box"  data-inedx="done">
+                <img src="../images/coffee/smallroom (6).jpg" alt="">
+                
+                <h3>Single Constrast Room</h3>
+                <div class="features">
+                <img src="../images/icons/clock (3).png" alt="">
+                <img src="../images/icons/fork.png" alt="">
+                <img src="../images/icons/wifi-signal.png" alt="">
+                <img src="../images/icons/cloth.png" alt="">
+                
+                
+                
+                </div>
+                <div class="info">
+                <h5>410$<span>/perday</span></h5>
+                <a  class="addBnt">Book Now</a>
+                
+                </div>
+                
+                </div>
+        
+                <div class="box"  data-inedx="done">
+                    <img src="../images/coffee/smallroom (1).jpg" alt="">
+                    
+                    <h3>Single Constrast Room</h3>
+                    <div class="features">
+                    <img src="../images/icons/clock (3).png" alt="">
+                    <img src="../images/icons/fork.png" alt="">
+                    <img src="../images/icons/wifi-signal.png" alt="">
+                    <img src="../images/icons/cloth.png" alt="">
+                    
+                    
+                    
+                    </div>
+                    <div class="info">
+                    <h5>410$<span>/perday</span></h5>
+                    <a  class="addBnt">Book Now</a>
+                    
+                    </div>
+                    
+                    </div>
+            
+                    <div class="box"  data-inedx="done">
+                        <img src="../images/rooms/room2.jpg" alt="">
+                        
+                        <h3>Single Constrast Room</h3>
+                        <div class="features">
+                        <img src="../images/icons/clock (3).png" alt="">
+                        <img src="../images/icons/fork.png" alt="">
+                        <img src="../images/icons/wifi-signal.png" alt="">
+                        <img src="../images/icons/cloth.png" alt="">
+                        
+                        
+                        
+                        </div>
+                        <div class="info">
+                        <h5>410$<span>/perday</span></h5>
+                        <a  class="addBnt">Book Now</a>
+                        
+                        </div>
+                        
+                        </div>
+                
+                                        
+
+
+
+</div>
+<!-- <div class="hotelContainer" >
+<div id="firstbox" class="box" data-inedx="done" >
+<img src="../images/rooms/room1.jpg" alt="">
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+</div>
+
+<div class="info">
+<h5>100$<span>/perday</span>s</h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/rooms/room10.jpg" alt="">
+
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+
+</div>
+
+<div class="info">
 <h5>160$<span>/perday</span></h5>
-<a  class="#landing">Book Now</a>
+<a  class="addBnt">Book Now</a>
 
 </div>
 
@@ -228,13 +494,10 @@
 
 
 </div>
-<div class="icons">
-<i id="hart" class="fa-solid fa-heart active"  style="color: #ff0505; font-size: 25px;"></i>
 
-</div>
 <div class="info">
 <h5>240$<span>/perday</span></h5>
-<a  class="#landing">Book Now</a>
+<a  class="addBnt">Book Now</a>
 
 </div>
 
@@ -253,53 +516,210 @@
 
 
 </div>
-<div class="icons">
-<i>ico3</i>
+<div class="info">
+<h5>410$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+
+</div>
+<div class="hotelContainer" >
+<div id="firstbox" class="box" data-inedx="done" >
+<img src="../images/rooms/room1.jpg" alt="">
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+</div>
+
+<div class="info">
+<h5>100$<span>/perday</span>s</h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/rooms/room10.jpg" alt="">
+
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+
+</div>
+
+<div class="info">
+<h5>160$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/rooms/room8.jpg" alt="">
+
+<h3>Stidow Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
+
+
+</div>
+
+<div class="info">
+<h5>240$<span>/perday</span></h5>
+<a  class="addBnt">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="box"  data-inedx="done">
+<img src="../images/rooms/room2.jpg" alt="">
+
+<h3>Single Constrast Room</h3>
+<div class="features">
+<img src="../images/icons/clock (3).png" alt="">
+<img src="../images/icons/fork.png" alt="">
+<img src="../images/icons/wifi-signal.png" alt="">
+<img src="../images/icons/cloth.png" alt="">
+
 
 
 </div>
 <div class="info">
 <h5>410$<span>/perday</span></h5>
-<a  class="#landing">Book Now</a>
+<a  class="addBnt">Book Now</a>
 
 </div>
 
 </div>
 
 
+</div> -->
+
+
+
+
+
+
+
 </div>
 
-
-
-</div>
+<form  class="bookingcard mt-5 " action="www.google.com">
+    <div class="closebtn " style="margin-right: 10px;cursor: pointer;">
+        <img src="../images/icons/cross.png" alt="">
+    </div>
+    <div class="type">
+    <h5 id="mydata">room</h5>
+    <div class="roomcard">
+    <select name="Guest Type" id="guestNumber"> 
+    <option value="1"  >1</option>
+    <option value="2"   >2</option>
+    <option value="3"  >3</option>
+    </select> 
+    <img src="../images/icons/bed.png" alt="">
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="type">
+    <h5>checkin</h5>
+    <div class="check-in">
+    <input type="text" id="check-In" placeholder="check in">
+    <img src="../images/icons/calendar.png" alt="">
+    
+    </div>
+    
+    </div>
+    <div class="type">
+    <h5>checkout</h5>
+    <div class="checkout">
+    <input type="text" name="checkout" id="check-out" placeholder="check-out" >
+    <img src="../images/icons/calendar.png" alt="">
+    
+    </div>
+    
+    </div>
+    <div class="type">
+    <h5>Guests</h5>
+    <div class="roomcard">
+    <select name="Guest Typ" id="guest">
+    <option value="1" selected="selected" class="guestnum">1</option>
+    <option value="1" selected="selected" class="guestnum">2</option>
+    <option value="1" selected="selected" class="guestnum">3</option>
+    
+    </select>
+    <img src="../images/icons/user (1).png" alt="">
+    
+    </div>
+    
+    </div>
+    <div class="bookBtn">
+    <a id="BookBtn" class="p-2 btn" style="background-color: blue; color: white;" >Book know</a> 
+    <!-- <input type="text" name="checkin" id="check-in" placeholder="checkin"> -->
+    
+    
+    </div>
+    
+    </form>
 
 </section>
 <!-- End hotelRooms Section -->
 
 <!-- start servies section -->
 <section id="servies">
-<div class="servies">
-<div class="container">
+<div class="servies" >
+<div class="container" >
 <div class="contect">
 <h5>servies</h5>
 <h3>servie only for the best!</h3>
 </div>     
 
-<div class="box">
+<div class="box" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">
 <img src="../images/icons/cyber-security.png" alt="">
 <p>Hight class security</p>
 
-</div>  <div class="box">
+</div>  <div class="box" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="1000">
 <img src="../images/hotel-services/icons/24-hours-support.png" alt="">
 <p>24-hours support</p>
 
 </div> 
-<div class="box">
+<div class="box" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="1000">
 <img src="../images/hotel-services/icons/good.png"  alt="" style="height: 60px;">
 <p>conforince Room</p>
 
 </div>
-<div class="box">
+<div class="box" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">
 <img src="../images/hotel-services/icons/dumbbell.png" alt="">
 <p>Free gym servie </p>
 
@@ -320,7 +740,7 @@
 
 <!-- Start hotel Galary Section -->
 <section id="hotelgalary">
-<div class="hotelgalary">
+<div class="hotelgalary" data-aos="zoom-in-up">
 <h3>Best hotel servies</h3>
 <ul class="tablinks">
 <li  data-show=".first">food</li>
@@ -330,7 +750,11 @@
 
 </ul>
 
-<div class="content">
+
+
+
+
+<div class="content " data-aos="fade-up" data-aos-easing="400">
 <div class="first active">
 <img src="../images/coffee/coffee1.jpg" alt="">
 <img src="../images/food/food6.jpg" alt="">
@@ -338,7 +762,6 @@
 <img src="../images/food/food2n.jpg" alt="">
 <img src="../images/food/food5n.jpg" alt="">
 <img src="../images/food/food14.jpg" alt="">
-
 
 
 </div>
@@ -351,16 +774,18 @@
 <img src="../images/pool/pool1.jpg" alt=""> 
 
 </div>
-<div  class="three">
+<div  class="three" data-aos="zoom-in-up">
 <img src="../images/rooms/room10.jpg" alt="">
 <img src="../images/rooms/room8.jpg" alt="">
 <img src="../images/rooms/room3.jpg" alt="">
-<img src="images/rooms/room4.jpg" alt="">
+<img src="../images/rooms/room3.jpg" alt="">
+
 <img src="../images/rooms/room9.jpg" alt="">
 <img src="../images/rooms/room8.jpg" alt="">
 
+
 </div>
-<div class="four">
+<div class="four" data-aos="zoom-in-up">
 <img src="../images/hotel-services/gym.jpg" alt="">
 <img src="../images/hotel-services/servies.jpg" alt="">
 <img src="../images/hotel-services/reception.jpg" alt="">
@@ -371,23 +796,30 @@
 
 
 
-</div>
-
 
 </div>
 
+
+</div> 
+
 </div>
 
-</section>
+</section> 
 <!-- End hotel Galary Section -->
 
 <!-- / start about -->
+
+
+
 <section id="about">
-<div class="about-Container">
-<div class="image">
+<div class="about-Container " >
+<div class="image" data-aos="fade-right"     data-aos-duration="1000"
+data-aos-easing="ease-in-out"
+>
 <img src="../images/hotel-services/reception4.jpg" alt="about-img " >
 </div>
-<div class="main-text">
+<div class="main-text" data-aos="fade-left"   data-aos-duration="1000"
+data-aos-easing="ease-in-out" >
 <h5>about us</h5>
 <h1>the best holidays <br> start here!</h1>
 <p>Lorem ipsum dolor sit amet  consectetur ad
@@ -401,116 +833,53 @@ similique tempore pariatur inventore illum<br> nihil ducimus ipsum porro.</p>
 <!-- End about -->
 
 <!-- /start customers saying -->
-
-<section id="customersSayig">
-<div class="customersContainer">
-
-<div  class="box">
-<div class="image">
-<img src="../images/people/man3.jpg" alt="" >
-</div>
-<div class="customerstext">
-<h3>what customers are saying </h3>
-<p>Lorem ipsum dolor sit, amet consectetur
-Architecto illo dolor sunt quidem a error blanditiis,
-quisquam enim nihil! Nesciunt ex eos sunt est obcaecati sit accusantium!</p>
-<h5>Abdullah Hadi</h5>
-
-</div>
-
-
-
-</div>
-<div  class="box">
-<div class="image">
-<img src="../images/people/hotleAdmin.jpg" alt="" >
-</div>
-<div class="customerstext">
-<h3>what customers are saying </h3>
-<p>Lorem ipsum dolor sit, amet consectetur
-Architecto illo dolor sunt quidem a error blanditiis,
-quisquam enim nihil! Nesciunt ex eos sunt est obcaecati sit accusantium!</p>
-<h5>omer</h5>
-
-</div>
-
-
-
-</div>
-<div  class="active">
-    <div class="image">
-    <img src="../images/people/hotleAdmin.jpg" alt="" >
+ 
+<div class="demo mt-5 mb-5" data-aos="zoom-out-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="../images/people/hotleAdmin.jpg" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">web developer</span>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor nibh, semper at pretium vitae, tincidunt non risus. Aenean mattis sit amet ex nec venenatis. Pellentesque tempus pellentesque efficitur. Nulla commodo bibendum quam, at imperdiet orci congue non. Maecenas interdum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="../images/people/man3.jpg" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="title">kristina</h3>
+                            <span class="post">Web Designer</span>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor nibh, semper at pretium vitae, tincidunt non risus. Aenean mattis sit amet ex nec venenatis. Pellentesque tempus pellentesque efficitur. Nulla commodo bibendum quam, at imperdiet orci congue non. Maecenas interdum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="customerstext">
-    <h3>what customers are saying </h3>
-    <p>Lorem ipsum dolor sit, amet consectetur
-    Architecto illo dolor sunt quidem a error blanditiis,
-    quisquam enim nihil! Nesciunt ex eos sunt est obcaecati sit accusantium!</p>
-    <h5>Omer</h5>
-    
-    </div>
-    
-    
-    
-    </div>
-<div  class="box">
-<div class="image">
-<img src="../images/people/hotleAdmin.jpg" alt="" >
-</div>
-<div class="customerstext">
-<h3>what customers are saying </h3>
-<p>Lorem ipsum dolor sit, amet consectetur
-Architecto illo dolor sunt quidem a error blanditiis,
-quisquam enim nihil! Nesciunt ex eos sunt est obcaecati sit accusantium!</p>
-<h5>omer</h5>
-
-</div>
-
-</div>
-
-<div  class="box">
-<div class="image">
-<img src="../images/people/hotleAdmin.jpg" alt="" >
-</div>
-<div class="customerstext">
-<h3>what customers are saying </h3>
-<p>Lorem ipsum dolor sit, amet consectetur
-Architecto illo dolor sunt quidem a error blanditiis,
-quisquam enim nihil! Nesciunt ex eos sunt est obcaecati sit accusantium!</p>
-<h5>ahmed</h5>
-
 </div>
 
 
 
-</div>
-<!-- <img class="rightBtn" src="images/icons/clock (3).png" alt="" > -->
-<i id="lefttslidbtn" class="fa-solid fa-arrow-left " style="color: #ffff;"></i>
-<i id="rightslidbtn" class="fa-solid fa-arrow-right" style="color: #ffff;"></i>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
 <!--   End customers saying  -->
 
 
 <!-- start Footer Section  -->
+
+
+<!--  -->
+
+
 
 <footer id="footer">
 <div class="info-Section">
@@ -591,13 +960,50 @@ fuga vero rerum laboriosam inventore iure asperiores unde tempora!</p>
 
 </div>
 
-
-
 </footer>
 
 <!-- end Footer Section  -->
 
+<div class="my_booking">
+    <img  id="closeform" src="../images/icons/cross.png" alt="">
+    <div class="checkIN">
+        <h5>check In </h5>
+        <h5 id="newdate"></h5>
+    </div>
+    <div class="checkout">
+        <h5>check out </h5>
+        <h5 id="checkout_date"></h5>
+    </div>
+    <div class="roomnumber">
+        <h5>rooms number </h5>
+        <h6 id="roomNums">333</h6>
+    </div>
+
+
+
+</div>
+
+
+<!-- <script src="../jquery-3.7.1.min.js"></script>  -->
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="../script.js"></script>
+
 </body>
 
 

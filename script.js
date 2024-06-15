@@ -3,40 +3,20 @@ let nums=document.querySelectorAll(".whyUs .box");
 let section=document.getElementById("whyUs");
 let counter=document.getElementById("Btnn");
 let started=false;
-let bookBtn=document.getElementById("BookBtn");
-let roomType=document.querySelector("[name ='checout']");
-let pass=document.getElementById("pass");
-let checkOut=document.getElementById("check-out");
-let guestNumber=document.getElementById("guestNumber");
+
 let bookcart=document.querySelector("bookcart");
 let conformContainer=document.querySelector("conformContainer");
 let guestnum=document.getElementById("guestNumber").value;
 let roomnums=document.querySelectorAll('.roomType')[0];
 let closbox=document.getElementById("closbox");
 let cancelbookingbox=document.getElementById("cancelbookingbox");
-let yesBtn=document.getElementById("yes");
-let noBtn=document.getElementById("no");
+
 
 // booking form search-----------------------booking----------------------
-let checkIn=document.getElementById("check-In");
-let checOut=document.getElementById("check-out");
-let btnpop=document.getElementById("BookBtn");
-let cardcon=document.getElementById("cardcon");
-let loadami=document.querySelector('.loadingnimation');
-let checkform=document.querySelector('.check-form');
-let  cancel=document.getElementById("cancel");
-let  coform=document.getElementById("coform");
 
-btnpop.onclick=function(){
-loadami.style.display='flex';
-checkform.style.display='flex';
-window.localStorage.setItem('checkinday',JSON.stringify(checkIn.value));
-window.localStorage.setItem('checkoutday',JSON.stringify(checkOut.value));
+// window.localStorage.setItem('checkinday',JSON.stringify(checkIn.value));
+// window.localStorage.setItem('checkoutday',JSON.stringify(checkOut.value));
 
-checOut.value='';
-checkIn.value='';
-
-}
 
 
 // show numbers when scrolling
@@ -107,46 +87,6 @@ document.querySelector( e.currentTarget.dataset.show).classList.add('active');
 });
 
 
-
-// galary box images---------------------------end-------------------------
-
-// what customers are saying ---------------------------saying-----------------
-
-let customersContainer= Array.from(document.querySelectorAll('.customersContainer >div'));
-let lefttslidbtn=document.getElementById('lefttslidbtn');
-let currentactive=1;
-let countdiv=customersContainer.length;
-
-lefttslidbtn.onclick=function(){
-currentactive++;
-slidtestimonis();
-}
-rightslidbtn.onclick=function(){
-currentactive--;
-slidtestimonis();
-console.log("down");    
-
-}
-
-function slidtestimonis(){
-customersContainer.forEach((div)=>{
-div.classList.remove('active');
-});
-
-
-for (let i=1 ;i<countdiv;i++){
-customersContainer[currentactive-1].classList.add("active");
-console.log(customersContainer);
-
-}
-
-}
-
-// what customers are saying ---------------------------saying-----------------
-
-// hotel rooms cards-----------------------------------------
-
-
 let leftslideBtn=document.getElementById('leftslideBtn');
 
 let rightslideBtn=document.getElementById('rightslideBtn');
@@ -176,51 +116,170 @@ hotelCards[currentCard-1].classList.remove("active");
 
 
 
-let moreboxes=document.getElementById('moreboxes');
-
-let morebox=document.getElementById('morebox');
 
 
-morebox.onclick=function(){
-moreboxes.style.opacity=1;
-morebox.style.display='none';
 
+
+
+
+// testimonial section
+
+$(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        margin:10,
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
+});
+
+
+
+// when users clicks book btn
+
+    $(document).ready(function () { 
+      
+        $('.addBnt').click(function(){
+            $('.bookingcard').css('display','flex')
+
+        })
+
+        $('.closebtn').click(function(){
+            $('.bookingcard').css('display','none')
+
+
+        })
+
+
+
+    }); 
+
+
+    // datapicker form 
+
+let  newdate=document.getElementById('newdate');
+let  checkout_dat=document.getElementById('checkout_dat');
+let closeform=document.getElementById('closeform');
+let room_card=document.querySelector('.room_card');
+let Book_Btn=document.getElementById("Book_Btn");
+
+
+
+
+
+
+
+// roomNums.innerHTML=room_card.value;
+$(document).ready(function () {
+    
+    $('#cart').click(function(){
+        $('.my_booking').css('display','flex');
+
+    })
+    $(closeform).click(function(){
+        $('.my_booking').css('display','none');
+
+    })
+
+
+$(function () {
+
+$("#my_date_picker").datepicker({
+
+    onSelect: function() { 
+        let dateObject = $(this).datepicker('getDate'); 
+        let newdtaformat=($.datepicker.formatDate("yy-mm-dd", dateObject));
+                newdate.innerHTML=newdtaformat;
+
+    }
+  })
+
+});
+
+$("#date_picker_chekOut").datepicker({
+
+onSelect: function() { 
+    let checkoutdata = $(this).datepicker('getDate'); 
+    let checkoutdataformat=($.datepicker.formatDate("yy-mm-dd", checkoutdata));
+            checkout_date.innerHTML=checkoutdataformat;
 
 }
+})
 
-
-console.log('js');
-
-
-
+});
 
 
 
+// let BookBtn=document.getElementById('BookBtn');
+
+let my_date_picker=document.getElementById('my_date_picker');
+
+let date_picker_chekOut=document.getElementById('date_picker_chekOut');
 
 
+$('#BookBtn').click(function(e){
+    if (my_date_picker.value==='' || date_picker_chekOut.value===''){
+        alert('Enter chekin date and chekOut data !')
+        e.preventDefault();
+
+    }
+
+    my_date_picker.value='';
+    date_picker_chekOut.value='';
+    // alert('rr');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
 
 
 
 
 
+  $('.your-class').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+
+
+
+  $(document).ready(function() {
+    $('.slider').slick({
+  slidesToScroll: 4,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: true,
+  arrows:true,
+  slidesToShow: 4,
+  centerPadding: '40px',
+
+
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
 
 
 
@@ -235,21 +294,20 @@ console.log('js');
 
 
 
+//   fade: true,
 
 
+  
 
 
+    
+    
+    });
+  });
 
 
-
-
-
-
-
-
-
-
-
+// inslizing AOS Animation
+    AOS.init();
 
 
 
