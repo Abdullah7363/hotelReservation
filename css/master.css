@@ -32,15 +32,10 @@ box-sizing: border-box;
 
 }
 body {
-font-family: "Playfair Display", serif;
-font-optical-sizing: auto;
-font-weight: 500;
-font-style: normal;
-
-
-
-}
-
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
 
 
 
@@ -63,16 +58,7 @@ text-decoration: none;
 
 
 
-body{
 
-
-font-family: "El Messiri", sans-serif;
-font-optical-sizing: auto;
-font-weight: 200px;
-font-style: normal;
-
-
-}
 html {
 scroll-behavior: smooth;
 
@@ -80,6 +66,14 @@ scroll-behavior: smooth;
 }
 /* custom BootStar */
 
+
+
+.nav-section ul li  a {
+    color: var(--maincolor);
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 24px;
+} 
 /* Start Lainding Section */
 .landing {
 background-image: url(/images/pool/pooln.jpg);
@@ -146,7 +140,9 @@ box-shadow: var(--mainshadow);
 
 @media (max-width:992px) {
 .landing {
-background-image: none;
+    height: 300px
+    
+
 
 }
 .landing .maintext h1, .landing .maintext p {
@@ -355,48 +351,10 @@ transition: ease-in-out 1s;
 
 }
 
-
-/* 
-@media (max-width:992px) {
-.hotelRooms  .hotelContainer {
-flex-direction: column;
-margin-bottom: 300px;
-}
-.hotelRooms  .headingTitle {
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 17px;
-font-weight: normal;
-margin-left: 50px;
-
-
-}
+ 
 
 
 
-
-
-}
-/* mobile screen  */
-
-/* @media (max-width:767px) {
-.hotelRooms  .hotelContainer {
-flex-direction: column; 
-margin-bottom: 800px;
-
-}
-.hotelRooms  #morebox{
-display: none;
-}}
-.hotelRooms  .headingTitle {
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 17px;
-font-weight: normal;
-margin-left: 50px;
-}  */
 
 
 
@@ -417,13 +375,13 @@ opacity: 0;
 
 .hotelRooms   .hotelContainer .box  {
 flex-basis: 20%;
-background-color: #edf0ff;
 text-align: center;
 position: relative;
 border-radius: 8px;
 box-shadow: var(--mainshadow);
 
 }
+
 
 .hotelRooms  .hotelContainer .box.active  {
 display: none;
@@ -442,6 +400,9 @@ transition: var(--main-transistion);
 border-radius: 10px;
 
 
+}
+.hotelRooms   .hotelContainer .box:hover  img{
+    transform: rotate(3deg);
 }
 .hotelRooms  .hotelContainer .box:hover .icons {
 display: flex;

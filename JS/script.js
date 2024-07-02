@@ -12,11 +12,6 @@ let closbox=document.getElementById("closbox");
 let cancelbookingbox=document.getElementById("cancelbookingbox");
 
 
-// booking form search-----------------------booking----------------------
-
-// window.localStorage.setItem('checkinday',JSON.stringify(checkIn.value));
-// window.localStorage.setItem('checkoutday',JSON.stringify(checkOut.value));
-
 
 
 // show numbers when scrolling
@@ -27,7 +22,6 @@ if (window.scrollY >= section.offsetTop){
 if (!started){
 nums.forEach((num) => {
 startcounter(num);
-
 });
 
 }
@@ -41,6 +35,23 @@ started=true;
 
 }
 
+// (function ($){
+//   "use strict";
+
+  var spinner = function () {
+    setTimeout(function () {
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show');
+        }
+    }, 1);
+};
+spinner();
+// });
+
+// let spinner=
+
+
+// counting numbers
 function startcounter(ele){
 let gaol=ele.dataset.goal;
 let count=setInterval(()=>{
